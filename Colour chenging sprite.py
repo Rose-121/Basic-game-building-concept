@@ -21,6 +21,9 @@ sprite_width, sprite_height = 60, 60
 clock = pygame.time.Clock()
 done = False
 
+font = pygame.font.SysFont("Times new Roman", 36)
+text = font.render("My first game Screen", True, (254, 141, 232))
+
 while not done:
     
     for event in pygame.event.get():
@@ -46,6 +49,7 @@ while not done:
     screen.fill((0, 0, 0))
     pygame.draw.rect(screen , current_color,(x,y, sprite_width, sprite_height) )
     
+    screen.blit(text, (90,200))    
     pygame.display.flip()
     clock.tick(90)
     
